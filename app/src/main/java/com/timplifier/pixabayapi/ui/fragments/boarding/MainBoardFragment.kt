@@ -1,7 +1,5 @@
 package com.timplifier.pixabayapi.ui.fragments.boarding
 
-import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.viewModels
 import com.timplifier.pixabayapi.R
 import com.timplifier.pixabayapi.databinding.FragmentMainBoardBinding
@@ -15,6 +13,7 @@ class MainBoardFragment : BaseFragment<FragmentMainBoardBinding>(
 
     override fun setupListeners() {
         super.setupListeners()
+
 
     }
 
