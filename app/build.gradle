@@ -51,7 +51,7 @@ dependencies {
 
     //nav component implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"
-    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation "androidx.navigation:navigation-presentation:$nav_version"
 
     // room implementation ( gonna work in 1 week )
     implementation "androidx.room:room-runtime:$room_version"

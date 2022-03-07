@@ -1,4 +1,14 @@
 package com.timplifier.pixabayapi.data.remote.response
 
-class PixabayResponse {
-}
+import com.google.gson.annotations.SerializedName
+import com.timplifier.pixabayapi.data.remote.hits.PixabayHits
+
+data class PixabayResponse(
+    @SerializedName("total")
+    val total: Int,
+    @SerializedName("totalHits")
+    val totalHits: Int,
+    @SerializedName("hits")
+    val hits: List<PixabayHits>
+
+)

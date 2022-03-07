@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,7 +11,7 @@
         android:layout_height="374dp"
         android:layout_gravity="center"
         android:layout_marginTop="133dp"
-        android:contentDescription="@string/image_from_board" />
+        android:contentDescription="@string/space_for_image_from_onboard" />
 
     <TextView
         android:id="@+id/tv_label"
@@ -19,10 +20,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="46dp"
         android:fontFamily="@font/proxima_bold"
-        android:text="ddd"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24dp" />
+        android:textSize="24sp"
+        tools:text="@tools:sample/lorem" />
 
     <TextView
         android:id="@+id/tv_desc"
@@ -30,11 +31,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:fontFamily="@font/proxima_bold"
-        android:text="ddd"
+        android:fontFamily="@font/proxima_regular"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="16dp" />
+        android:textSize="16sp"
+        tools:text="@tools:sample/lorem" />
 
 
 </LinearLayout>

@@ -1,9 +1,9 @@
-package com.timplifier.pixabayapi.ui.fragments
+package com.timplifier.pixabayapi.presentation.ui.fragments
 
 import android.os.Bundle
 import android.view.View
 import com.timplifier.pixabayapi.databinding.FragmentSearchImagesBinding
-import com.timplifier.pixabayapi.ui.base.BaseFragment
+import com.timplifier.pixabayapi.presentation.base.BaseFragment
 
 
 class SearchImagesFragment : BaseFragment<FragmentSearchImagesBinding>(

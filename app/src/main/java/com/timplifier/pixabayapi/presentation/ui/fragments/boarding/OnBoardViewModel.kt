@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.ui.fragments.boarding
+package com.timplifier.pixabayapi.presentation.ui.fragments.boarding
 
 import androidx.lifecycle.ViewModel
 import com.timplifier.pixabayapi.data.local.PreferencesHelper
