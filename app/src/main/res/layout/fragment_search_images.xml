@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.SearchImagesFragment">
+    tools:context=".presentation.ui.fragments.SearchImagesFragment">
+
     <EditText
-        android:hint="Type anything you want to search for "
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        android:layout_height="wrap_content" />
-
+        android:hint="Type anything you want to search for " />
 
 
 </LinearLayout>

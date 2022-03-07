@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.ui.base
+package com.timplifier.pixabayapi.presentation.base
 
 import android.os.Bundle
 import android.view.View

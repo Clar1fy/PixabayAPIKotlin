@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.ui.activity
+package com.timplifier.pixabayapi.presentation.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
