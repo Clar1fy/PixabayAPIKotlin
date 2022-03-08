@@ -9,11 +9,12 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-class PixabayRepository @Inject constructor(pixabayApi: PixabayApi) {
+class PixabayRepository @Inject constructor(
+    var imageList: MutableLiveData<List<PixabayHits>>, private val pixabayApi: PixabayApi
+) {
 
     suspend fun getImages(
-        imageList: MutableLiveData<List<PixabayHits>>,
-        pixabayApi: PixabayApi, word: String
+        word: String
     ): MutableLiveData<List<PixabayHits>> {
         pixabayApi.getImages(word).enqueue(object : Callback<PixabayResponse?> {
             override fun onResponse(

@@ -7,4 +7,9 @@
     <string name="button_to_add_new_words">Button to add new words</string>
     <string name="butterfly">Butterfly</string>
     <string name="image_for_words">image for words</string>
+    <string name="create">Create</string>
+    <string name="category_name">Category name</string>
+    <string name="button_to_add_new_categories">button to add new categories</string>
+    <string name="new_category">New Category</string>
+    <string name="enter_the_word">Enter the word</string>
 </resources>
