@@ -1,12 +1,10 @@
 package com.timplifier.pixabayapi.presentation.ui.fragments.words
 
-import android.view.View
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.pixabayapi.R
 import com.timplifier.pixabayapi.databinding.FragmentWordsBinding
 import com.timplifier.pixabayapi.presentation.base.BaseFragment
-import com.timplifier.pixabayapi.presentation.ui.adapters.WordsAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -19,7 +19,7 @@
         android:id="@+id/wordsFragment"
         android:name="com.timplifier.pixabayapi.presentation.ui.fragments.words.WordsFragment"
         android:label="fragment_words"
-        tools:layout="@layout/fragment_words" >
+        tools:layout="@layout/fragment_words">
         <argument
             android:name="category"
             app:argType="string" />
@@ -28,7 +28,7 @@
         android:id="@+id/categoryFragment"
         android:name="com.timplifier.pixabayapi.presentation.ui.fragments.category.CategoryFragment"
         android:label="fragment_category"
-        tools:layout="@layout/fragment_category" >
+        tools:layout="@layout/fragment_category">
         <action
             android:id="@+id/action_categoryFragment_to_wordsFragment"
             app:destination="@id/wordsFragment" />

@@ -12,6 +12,7 @@ class CategoryFragment :
         R.layout.fragment_category
     ) {
     override val binding by viewBinding(FragmentCategoryBinding::bind)
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding == null

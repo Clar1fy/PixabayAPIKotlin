@@ -1,7 +1,6 @@
 package com.timplifier.pixabayapi.presentation.ui.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.pixabayapi.databinding.FragmentBoardBinding
