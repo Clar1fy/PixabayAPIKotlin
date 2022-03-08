@@ -10,11 +10,7 @@ abstract class BaseFragment<Binding : ViewBinding>(
     @LayoutRes layoutId: Int
 ) : Fragment(layoutId) {
 
-    private var _binding: Binding? = null
-    val binding: Binding
-        get() = _binding as Binding
-
-
+    protected abstract val binding: Binding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupListeners()
