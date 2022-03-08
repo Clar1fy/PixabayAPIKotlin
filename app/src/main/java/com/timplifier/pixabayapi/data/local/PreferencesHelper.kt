@@ -1,8 +1,9 @@
 package com.timplifier.pixabayapi.data.local
 
 import android.content.SharedPreferences
+import javax.inject.Inject
 
-class PreferencesHelper(
+class PreferencesHelper @Inject constructor(
     private val sharedPreferences: SharedPreferences
 ) {
 
@@ -11,8 +12,7 @@ class PreferencesHelper(
     }
 
     fun getBoolean(): Boolean {
-        var isShown: Boolean = sharedPreferences.getBoolean("shared_preferences", false)
-        return isShown
+        return sharedPreferences.getBoolean("shared_preferences", false)
 
     }
 

@@ -9,6 +9,6 @@ data class PixabayResponse(
     @SerializedName("totalHits")
     val totalHits: Int,
     @SerializedName("hits")
-    val hits: List<PixabayHits>
+    val hits: List<PixabayHits>? = null
 
 )

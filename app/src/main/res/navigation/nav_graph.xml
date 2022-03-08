@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/nav_graph.xml">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainBoardFragment">
 
+    <fragment
+        android:id="@+id/mainBoardFragment"
+        android:name="com.timplifier.pixabayapi.presentation.ui.fragments.boarding.MainBoardFragment"
+        android:label="fragment_main_board"
+        tools:layout="@layout/fragment_main_board" />
+    <fragment
+        android:id="@+id/searchImagesFragment"
+        android:name="com.timplifier.pixabayapi.presentation.ui.fragments.SearchImagesFragment"
+        android:label="fragment_search_images"
+        tools:layout="@layout/fragment_search_images" />
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.timplifier.pixabayapi.presentation.ui.fragments.words.WordsFragment"
+        android:label="fragment_words"
+        tools:layout="@layout/fragment_words" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.timplifier.pixabayapi.presentation.ui.fragments.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
 </navigation>

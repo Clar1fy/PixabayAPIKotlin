@@ -22,7 +22,12 @@ abstract class BaseFragment<Binding : ViewBinding>(
         setupObserver()
         setupArgs()
         getArgs()
+        enable()
+        check()
 
+    }
+
+    open fun check() {
     }
 
     open fun setupArgs() {
@@ -40,6 +45,10 @@ abstract class BaseFragment<Binding : ViewBinding>(
     }
 
     open fun setupListeners() {
+
+    }
+
+    open fun enable() {
 
     }
 

@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.presentation.di
+package com.timplifier.pixabayapi.di
 
 import com.timplifier.pixabayapi.data.remote.api.PixabayApi
 import com.timplifier.pixabayapi.data.remote.api.RapidApi

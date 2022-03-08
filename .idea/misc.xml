@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/PixabayAPI/app/src/main/res/drawable/button_rectangle_background.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/PixabayAPI/app/src/main/res/drawable/splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/PixabayAPI/app/src/main/res/layout/activity_main.xml" value="0.14074074074074075" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/PixabayAPI/app/src/main/res/layout/fragment_board.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/PixabayAPI/app/src/main/res/layout/fragment_main_board.xml" value="0.5" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/PixabayAPI/app/src/main/res/layout/fragment_search_images.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/PixabayAPI/app/src/main/res/layout/item_image.xml" value="0.14074074074074075" />
       </map>
