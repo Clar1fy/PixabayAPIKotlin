@@ -1,5 +1,6 @@
 package com.timplifier.pixabayapi.data.local.room.daos
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -11,5 +12,5 @@ interface WordDao {
     fun insert(wordModel: WordModel)
 
     @Query("SELECT * FROM words")
-    suspend fun getAllWords(): List<WordModel>
+    suspend fun getAllWords(): LiveData<List<WordModel>>
 }

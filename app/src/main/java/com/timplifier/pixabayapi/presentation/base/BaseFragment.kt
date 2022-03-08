@@ -36,7 +36,7 @@ abstract class BaseFragment<Binding : ViewBinding>(
 
     }
 
-    open fun setupObserver() {
+    open suspend fun setupObserver() {
 
     }
 
@@ -47,6 +47,7 @@ abstract class BaseFragment<Binding : ViewBinding>(
     open fun enable() {
 
     }
+
 
 
 }
