@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.presentation.di
+package com.timplifier.pixabayapi.di
 
 import android.content.Context
 import android.content.SharedPreferences

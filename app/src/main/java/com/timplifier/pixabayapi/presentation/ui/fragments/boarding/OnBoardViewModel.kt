@@ -7,14 +7,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class OnBoardViewModel @Inject constructor(
-    preferencesHelper: PreferencesHelper
+    private val preferencesHelper: PreferencesHelper
 ) : ViewModel() {
-    fun setBoolean(preferencesHelper: PreferencesHelper, isShown: Boolean) {
+    fun setBoolean(isShown: Boolean) {
         preferencesHelper.setBoolean(isShown)
     }
 
 
-    fun getBoolean(preferencesHelper: PreferencesHelper): Boolean {
+    fun getBoolean(): Boolean {
         return preferencesHelper.getBoolean()
     }
 

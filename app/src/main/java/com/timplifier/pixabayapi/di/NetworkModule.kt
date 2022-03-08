@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.presentation.di
+package com.timplifier.pixabayapi.di
 
 import com.timplifier.pixabayapi.common.constants.Constants
 import dagger.Module
