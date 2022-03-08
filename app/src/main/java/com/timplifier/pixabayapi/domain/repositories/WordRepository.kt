@@ -1,5 +1,6 @@
 package com.timplifier.pixabayapi.domain.repositories
 
+import androidx.lifecycle.LiveData
 import com.timplifier.pixabayapi.data.local.room.daos.WordDao
 import com.timplifier.pixabayapi.domain.models.WordModel
 import javax.inject.Inject
@@ -10,5 +11,9 @@ class WordRepository @Inject constructor(
     fun insert(wordModel: WordModel) = wordDao.insert(wordModel)
 
 
-    suspend fun getAllWords() = wordDao.getAllWords()
+    suspend fun getAllWords(): LiveData<List<WordModel>> {
+        return wordDao.getAllWords()
+
+    }
+
 }

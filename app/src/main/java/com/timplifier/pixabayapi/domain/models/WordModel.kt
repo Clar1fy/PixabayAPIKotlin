@@ -8,7 +8,7 @@ data class WordModel(
     @PrimaryKey(autoGenerate = true)
     var id: Int?,
     var category: String,
-    var image: String,
+    var image: Int,
     var word: String
 
 )

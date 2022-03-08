@@ -4,4 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="space_for_image_from_onboard">space for image from onboard</string>
     <string name="let_s_do_it">Let\'s do it!</string>
+    <string name="button_to_add_new_words">Button to add new words</string>
+    <string name="butterfly">Butterfly</string>
+    <string name="image_for_words">image for words</string>
 </resources>
