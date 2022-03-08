@@ -1,6 +1,8 @@
-package com.timplifier.pixabayapi.data.remote.api
+package com.timplifier.pixabayapi.data.remote.apis
 
 import com.timplifier.pixabayapi.common.constants.Constants
+import com.timplifier.pixabayapi.data.remote.response.RapidResponse
+import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,5 +13,5 @@ interface RapidApi {
         @Query("mt") mt: Int,
         @Query("x-rapidapi-host") host: String,
         @Query("x-rapidapi-key") key: String
-    )
+    ): Call<RapidResponse>
 }

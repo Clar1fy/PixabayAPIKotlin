@@ -1,7 +1,7 @@
 package com.timplifier.pixabayapi.domain.repositories
 
 import androidx.lifecycle.MutableLiveData
-import com.timplifier.pixabayapi.data.remote.api.PixabayApi
+import com.timplifier.pixabayapi.data.remote.apis.PixabayApi
 import com.timplifier.pixabayapi.data.remote.hits.PixabayHits
 import com.timplifier.pixabayapi.data.remote.response.PixabayResponse
 import retrofit2.Call

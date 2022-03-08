@@ -1,10 +1,10 @@
 package com.timplifier.pixabayapi.presentation.ui.fragments.boarding
 
 import android.view.View
-import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.pixabayapi.R
 import com.timplifier.pixabayapi.data.local.client.ViewPagerClient
 import com.timplifier.pixabayapi.databinding.FragmentMainBoardBinding
@@ -13,9 +13,11 @@ import com.timplifier.pixabayapi.presentation.ui.adapters.ViewPagerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainBoardFragment : BaseFragment<FragmentMainBoardBinding>(
-    R.layout.fragment_main_board
-) {
+class MainBoardFragment :
+    BaseFragment<FragmentMainBoardBinding>(
+        R.layout.fragment_main_board
+    ) {
+    override val binding by viewBinding(FragmentMainBoardBinding::bind)
     private val viewModel: OnBoardViewModel by viewModels()
 
     override fun setupListeners() = with(binding) {
@@ -40,9 +42,9 @@ class MainBoardFragment : BaseFragment<FragmentMainBoardBinding>(
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 if (position == 4) {
-                    btnGetStarted.isVisible == true
+                    btnGetStarted.visibility = View.VISIBLE
                 } else {
-                    btnGetStarted.isVisible == false
+                    btnGetStarted.visibility = View.GONE
                 }
 
             }
@@ -61,6 +63,11 @@ class MainBoardFragment : BaseFragment<FragmentMainBoardBinding>(
 
     private fun onItemClick(position: Int) {
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding == null
     }
 
 

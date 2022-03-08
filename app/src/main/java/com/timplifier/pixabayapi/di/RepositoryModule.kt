@@ -1,7 +1,7 @@
 package com.timplifier.pixabayapi.di
 
-import com.timplifier.pixabayapi.data.remote.api.PixabayApi
-import com.timplifier.pixabayapi.data.remote.api.RapidApi
+import com.timplifier.pixabayapi.data.remote.apis.PixabayApi
+import com.timplifier.pixabayapi.data.remote.apis.RapidApi
 import com.timplifier.pixabayapi.domain.repositories.PixabayRepository
 import com.timplifier.pixabayapi.domain.repositories.RapidRepository
 import dagger.Module

@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.data.remote.api
+package com.timplifier.pixabayapi.data.remote.apis
 
 import com.timplifier.pixabayapi.common.constants.Constants
 import com.timplifier.pixabayapi.data.remote.response.PixabayResponse
