@@ -3,6 +3,7 @@ package com.timplifier.pixabayapi.presentation.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.timplifier.pixabayapi.data.remote.hits.PixabayHits
 import com.timplifier.pixabayapi.databinding.ItemImageBinding
 
@@ -34,6 +35,9 @@ class ImageAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(hits: PixabayHits) = with(binding) {
             Glide.with(imImage).load(hits.largeImageURL).into(imImage)
+            binding.root.setOnClickListener {
+
+            }
 
         }
 

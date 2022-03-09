@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.app
+package com.timplifier.pixabayapi
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

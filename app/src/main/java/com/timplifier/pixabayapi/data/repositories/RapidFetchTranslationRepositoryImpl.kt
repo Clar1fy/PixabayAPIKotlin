@@ -1,27 +1,28 @@
-package com.timplifier.pixabayapi.domain.repositories
+package com.timplifier.pixabayapi.data.repositories
 
 import androidx.lifecycle.MutableLiveData
 import com.timplifier.pixabayapi.common.constants.Constants
 import com.timplifier.pixabayapi.data.remote.apis.RapidApi
 import com.timplifier.pixabayapi.data.remote.hits.RapidHits
 import com.timplifier.pixabayapi.data.remote.response.RapidResponse
+import com.timplifier.pixabayapi.domain.repositories.RapidFetchTranslationRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
-class RapidRepository @Inject constructor(rapidApi: RapidApi) {
-    suspend fun getTranslation(
-        translationList: MutableLiveData<List<RapidHits>>, rapidApi: RapidApi, word: String
-    ): MutableLiveData<List<RapidHits>> {
+class RapidFetchTranslationRepositoryImpl @Inject constructor(
+    private val rapidApi: RapidApi
+) : RapidFetchTranslationRepository {
+    override suspend fun fetchTranslations(word: String): MutableLiveData<List<RapidHits>> {
+        var translationList = MutableLiveData<List<RapidHits>>()
         rapidApi.getTranslation(word, 0, Constants.RAPID_HOST, Constants.RAPID_KEY)
             .enqueue(object : Callback<RapidResponse?> {
                 override fun onResponse(
                     call: Call<RapidResponse?>,
                     response: Response<RapidResponse?>
                 ) {
-                    if (response.isSuccessful)
-                        translationList.postValue(response.body()!!.match)
+                    translationList.postValue(response.body()!!.match)
 
                 }
 
@@ -30,6 +31,6 @@ class RapidRepository @Inject constructor(rapidApi: RapidApi) {
                 }
             })
         return translationList
-
     }
+
 }

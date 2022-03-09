@@ -1,6 +1,7 @@
 package com.timplifier.pixabayapi.di
 
 import android.content.Context
+import com.timplifier.pixabayapi.data.local.room.daos.CategoryDao
 import com.timplifier.pixabayapi.data.local.room.daos.WordDao
 import com.timplifier.pixabayapi.data.local.room.database.RoomDatabase
 import com.timplifier.pixabayapi.data.local.room.helper.RoomHelper
@@ -26,6 +27,12 @@ object RoomModule {
         return RoomHelper().provideWordDao(roomDatabase)
 
 
+    }
+
+    @Singleton
+    @Provides
+    fun provideCategoryDao(roomDatabase: RoomDatabase): CategoryDao {
+        return RoomHelper().provideCategoryDao(roomDatabase)
     }
 
 }
