@@ -4,13 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.timplifier.pixabayapi.data.remote.hits.PixabayHits
+import com.timplifier.pixabayapi.data.repositories.WordInsertRepositoryImpl
 import com.timplifier.pixabayapi.domain.models.WordModel
-import com.timplifier.pixabayapi.domain.repositories.PixabayRepository
-import com.timplifier.pixabayapi.domain.repositories.WordRepository
 import javax.inject.Inject
 
 class WordsViewModel @Inject constructor(
-    private val wordRepository: WordRepository,
+    private val wordInsertRepositoryImpl: WordInsertRepositoryImpl
     private var list: MutableLiveData<List<PixabayHits>>,
     private val pixabayRepository: PixabayRepository
 

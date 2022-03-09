@@ -3,7 +3,6 @@ package com.timplifier.pixabayapi.presentation.ui.fragments.category
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.timplifier.pixabayapi.domain.models.CategoryModel
-import com.timplifier.pixabayapi.domain.repositories.CategoryRepository
 import javax.inject.Inject
 
 class CategoryViewModel @Inject constructor(
