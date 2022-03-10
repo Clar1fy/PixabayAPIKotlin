@@ -13,6 +13,10 @@ data class CategoryEntity(
 )
 
 
+fun CategoryEntity.toModel() = CategoryModel(
+    id, title
+)
+
 fun CategoryModel.toEntity(): CategoryEntity = CategoryEntity(
     id, title
 )

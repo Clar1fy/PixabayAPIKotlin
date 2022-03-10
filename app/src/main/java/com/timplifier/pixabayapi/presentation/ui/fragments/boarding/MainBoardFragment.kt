@@ -55,7 +55,8 @@ class MainBoardFragment :
     override fun setupAdapter() {
         super.setupAdapter()
         val viewPagerClient = ViewPagerClient()
-        val viewPagerAdapter = ViewPagerAdapter(viewPagerClient.getList(), this::onItemClick)
+        val viewPagerAdapter = ViewPagerAdapter(this::onItemClick)
+        viewPagerAdapter.setList(viewPagerClient.getList())
         binding.viewpager.adapter = viewPagerAdapter
         binding.dotsIndicator.setViewPager2(binding.viewpager)
 

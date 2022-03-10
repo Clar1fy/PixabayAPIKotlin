@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.timplifier.pixabayapi.databinding.FragmentCreateCategoryBottomSheetBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class CreateCategoryBottomSheetFragment : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentCreateCategoryBottomSheetBinding
     override fun onCreateView(

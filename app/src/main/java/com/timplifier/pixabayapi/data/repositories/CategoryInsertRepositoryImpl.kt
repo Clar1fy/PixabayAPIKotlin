@@ -8,9 +8,7 @@ import javax.inject.Inject
 
 class CategoryInsertRepositoryImpl @Inject constructor(
     private val categoryDao: CategoryDao
-)
-
-    : CategoryInsertRepository {
+) : CategoryInsertRepository {
 
 
     override fun insertCategory(categoryModel: CategoryModel) {

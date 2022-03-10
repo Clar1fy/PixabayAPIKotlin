@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.data.local.room.helper
+package com.timplifier.pixabayapi.data.local.room
 
 import android.content.Context
 import androidx.room.Room
@@ -6,6 +6,7 @@ import com.timplifier.pixabayapi.data.local.room.database.RoomDatabase
 import dagger.hilt.android.qualifiers.ApplicationContext
 
 class RoomHelper {
+
     fun provideRoom(@ApplicationContext context: Context) =
         Room.databaseBuilder(context, RoomDatabase::class.java, "database")
             .allowMainThreadQueries()

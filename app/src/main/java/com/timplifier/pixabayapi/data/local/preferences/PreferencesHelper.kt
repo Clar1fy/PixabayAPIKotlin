@@ -1,4 +1,4 @@
-package com.timplifier.pixabayapi.data.local
+package com.timplifier.pixabayapi.data.local.preferences
 
 import android.content.SharedPreferences
 import javax.inject.Inject
