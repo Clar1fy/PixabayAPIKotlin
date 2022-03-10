@@ -13,9 +13,10 @@ import com.timplifier.pixabayapi.databinding.FragmentCreateWordBottomSheetBindin
 
 
 class CreateWordBottomSheetFragment(
-    private var handler: Handler?
 
 ) : BottomSheetDialogFragment() {
+    var handler: Handler? = Handler()
+
     private lateinit var binding: FragmentCreateWordBottomSheetBinding
     private val viewModel: WordsViewModel by viewModels()
     override fun onCreateView(

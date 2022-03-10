@@ -28,6 +28,7 @@ class WordsFragment(private val wordsFragmentArgs: WordsFragmentArgs) :
                 requireActivity().supportFragmentManager,
                 "word dialog opened"
             )
+
         }
 
 

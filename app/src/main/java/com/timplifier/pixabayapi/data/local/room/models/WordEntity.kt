@@ -14,6 +14,10 @@ data class WordEntity(
 
 )
 
-fun Word.toDomain() = WordModel(
+fun WordEntity.toModel(): WordModel = WordModel(
+    id, category, image, word
+)
+
+fun WordModel.toEntity(): WordEntity = WordEntity(
     id, category, image, word
 )

@@ -1,5 +1,6 @@
 package com.timplifier.pixabayapi.presentation.ui.fragments.boarding
 
+import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
