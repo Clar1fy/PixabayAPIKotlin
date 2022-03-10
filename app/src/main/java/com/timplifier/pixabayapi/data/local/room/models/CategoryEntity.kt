@@ -5,13 +5,14 @@ import androidx.room.PrimaryKey
 import com.timplifier.pixabayapi.domain.models.CategoryModel
 
 @Entity(tableName = "categories")
-data class Category(
+data class CategoryEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int?,
     var title: String
 
 )
 
-fun Category.toDomain() = CategoryModel(
+
+fun CategoryModel.toEntity(): CategoryEntity = CategoryEntity(
     id, title
 )

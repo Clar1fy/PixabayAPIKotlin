@@ -4,14 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.timplifier.pixabayapi.data.local.room.models.Category
 import com.timplifier.pixabayapi.domain.models.CategoryModel
 
 @Dao
 interface CategoryDao {
     @Insert
-    fun insert(categoryModel: Category)
+    fun insert(categoryModel: CategoryModel)
 
     @Query("SELECT * FROM categories")
-    suspend fun getAllCategories(): LiveData<List<Category>>
+    suspend fun getAllCategories(): LiveData<List<CategoryModel>>
 }
