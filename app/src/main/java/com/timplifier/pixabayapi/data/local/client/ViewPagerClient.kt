@@ -6,7 +6,7 @@ import com.timplifier.pixabayapi.domain.models.ViewPagerModel
 class ViewPagerClient {
 
     fun getList(): ArrayList<ViewPagerModel> {
-        lateinit var list: ArrayList<ViewPagerModel>
+        val list = ArrayList<ViewPagerModel>()
         list.add(
             ViewPagerModel(
                 "Categories",

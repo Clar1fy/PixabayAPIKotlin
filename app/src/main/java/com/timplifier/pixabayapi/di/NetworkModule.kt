@@ -1,6 +1,8 @@
 package com.timplifier.pixabayapi.di
 
 import com.timplifier.pixabayapi.common.constants.Constants
+import com.timplifier.pixabayapi.data.remote.apis.PixabayApi
+import com.timplifier.pixabayapi.data.remote.apis.RapidApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,26 +18,28 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
     @Singleton
     @Provides
-    fun providePixabayApi(okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofitPixabayApiService(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_PIXABAY_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
+            .client(provideOkHttpClient(provideLoggingInterceptor()))
             .build()
-
 
     }
 
+
     @Singleton
     @Provides
-    fun provideRapidApi(okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofitRapidApiService(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_RAPID_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
+            .client(provideOkHttpClient(provideLoggingInterceptor()))
             .build()
+
     }
 
     @Singleton
@@ -54,5 +58,17 @@ object NetworkModule {
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
+    }
+
+    @Provides
+    @Singleton
+    fun providePixabayApiService(): PixabayApi {
+        return provideRetrofitPixabayApiService().create(PixabayApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRapidApiService(): RapidApi {
+        return provideRetrofitRapidApiService().create(RapidApi::class.java)
     }
 }

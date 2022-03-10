@@ -1,7 +1,7 @@
 package com.timplifier.pixabayapi.presentation.ui.fragments.boarding
 
 import androidx.lifecycle.ViewModel
-import com.timplifier.pixabayapi.data.local.PreferencesHelper
+import com.timplifier.pixabayapi.data.local.preferences.PreferencesHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

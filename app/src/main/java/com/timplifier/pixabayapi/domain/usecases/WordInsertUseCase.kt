@@ -7,5 +7,5 @@ import javax.inject.Inject
 class WordInsertUseCase @Inject constructor(
     private val wordInsertRepository: WordInsertRepository
 ) {
-     fun insert(wordModel: WordModel) = wordInsertRepository.insert(wordModel)
+    fun insert(wordModel: WordModel) = wordInsertRepository.insert(wordModel)
 }

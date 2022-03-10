@@ -6,10 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.pixabayapi.databinding.WordsHolderBinding
 import com.timplifier.pixabayapi.domain.models.WordModel
 
-class WordsAdapter(
-    private var list: List<WordModel>
-) :
+class WordsAdapter :
     RecyclerView.Adapter<WordsAdapter.WordsHolder>() {
+    private var list = ArrayList<WordModel>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordsAdapter.WordsHolder {
         return WordsHolder(
             WordsHolderBinding.inflate(
@@ -20,13 +19,13 @@ class WordsAdapter(
         )
     }
 
-    fun setList(list: List<WordModel>): List<WordModel> {
-        return list
-
+    fun setList(list: List<WordModel>) {
+        this.list.addAll(list)
+        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: WordsAdapter.WordsHolder, position: Int) {
-        holder.onBind(list.get(position))
+        holder.onBind(list[position])
     }
 
     override fun getItemCount(): Int {

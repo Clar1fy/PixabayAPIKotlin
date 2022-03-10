@@ -8,8 +8,9 @@ import com.timplifier.pixabayapi.data.remote.hits.PixabayHits
 import com.timplifier.pixabayapi.databinding.ItemImageBinding
 
 class ImageAdapter(
-    private var list: List<PixabayHits>
 ) : RecyclerView.Adapter<ImageAdapter.ImageHolder>() {
+
+    private var list = ArrayList<PixabayHits>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageHolder {
@@ -22,8 +23,13 @@ class ImageAdapter(
         )
     }
 
+    fun setList(list: List<PixabayHits>) {
+        this.list.addAll(list)
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: ImageHolder, position: Int) {
-        holder.onBind(list.get(position))
+        holder.onBind(list[position])
 
     }
 

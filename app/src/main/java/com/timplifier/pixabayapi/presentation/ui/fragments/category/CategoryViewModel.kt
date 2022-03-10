@@ -7,6 +7,7 @@ import com.timplifier.pixabayapi.domain.usecases.CategoriesRetrievalUseCase
 import com.timplifier.pixabayapi.domain.usecases.CategoryInsertUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+
 @HiltViewModel
 class CategoryViewModel @Inject constructor(
     private val categoryInsertUseCase: CategoryInsertUseCase,

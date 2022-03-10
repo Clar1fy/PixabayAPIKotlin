@@ -1,19 +1,16 @@
 package com.timplifier.pixabayapi.presentation.ui.adapters
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.pixabayapi.databinding.FragmentBoardBinding
 import com.timplifier.pixabayapi.domain.models.ViewPagerModel
 
 class ViewPagerAdapter(
-    var list: ArrayList<ViewPagerModel>, val onPageClickListener: (position: Int) -> Unit
+    val onPageClickListener: (position: Int) -> Unit
 ) : RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder>() {
-
-
-    fun setList(): ArrayList<ViewPagerModel> {
-        return list
-    }
+    private var list = ArrayList<ViewPagerModel>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerHolder {
@@ -27,8 +24,13 @@ class ViewPagerAdapter(
 
     }
 
+    fun setList(list: ArrayList<ViewPagerModel>) {
+        this.list = list
+
+    }
+
     override fun onBindViewHolder(holder: ViewPagerHolder, position: Int) {
-        holder.onBind(list.get(position))
+        holder.onBind(list[position])
 
     }
 
@@ -45,7 +47,7 @@ class ViewPagerAdapter(
             tvLabel.text = viewPagerModel.title
             tvDesc.text = viewPagerModel.description
             root.setOnClickListener(View.OnClickListener {
-                onPageClickListener(adapterPosition)
+                onPageClickListener(absoluteAdapterPosition)
 
             })
 

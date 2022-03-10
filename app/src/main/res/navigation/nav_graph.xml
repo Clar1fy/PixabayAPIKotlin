@@ -33,4 +33,14 @@
             android:id="@+id/action_categoryFragment_to_wordsFragment"
             app:destination="@id/wordsFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/createCategoryBottomSheetFragment"
+        android:name="com.timplifier.pixabayapi.presentation.ui.fragments.category.CreateCategoryBottomSheetFragment"
+        android:label="fragment_create_category_bottom_sheet"
+        tools:layout="@layout/fragment_create_category_bottom_sheet" />
+    <dialog
+        android:id="@+id/createWordBottomSheetFragment"
+        android:name="com.timplifier.pixabayapi.presentation.ui.fragments.words.CreateWordBottomSheetFragment"
+        android:label="fragment_create_word_bottom_sheet"
+        tools:layout="@layout/fragment_create_word_bottom_sheet" />
 </navigation>
